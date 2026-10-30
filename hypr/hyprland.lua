@@ -38,7 +38,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal    = "kitty"
 local fileManager = "thunar"
-local menu = "wofi --show drun"
+local menu = "wofi"
 local browser = "firefox"
 
 
@@ -106,14 +106,12 @@ hl.config({
         border_size = 2,
 
         col = {
---            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
---            active_border   = { colors = {"rgba(f7c59fee)", "rgba(481d24ee)"}, angle = 45 },
-            active_border   = { colors = {"rgba(9680c7ee)", "rgba(522fc4ee)"}, angle = 45 },
+            active_border   = { colors = {"rgba(9680c7ee)", "rgba(522fc4ee)"}, angle = 30 },
             inactive_border = "rgba(595959aa)",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
-        resize_on_border = true,
+        resize_on_border = false,
 
         -- Please see https://wiki.hypr.land/configuring/extra/tearing/ before you turn this on
         allow_tearing = false,

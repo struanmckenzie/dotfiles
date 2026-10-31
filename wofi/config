@@ -2,4 +2,4 @@ width=40%
 height=40%
 show=drun
 prompt=Search
-style=/home/struan/.config/wofi/styles.css
+style=/home/struan/.config/wofi/styles-glass.css

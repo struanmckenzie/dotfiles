@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # update packages
-pacman -Qe > pkglist.txt
+pacman -Qqe > pkglist.txt
 
 # add changes to git and commit
 git add .

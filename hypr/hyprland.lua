@@ -61,6 +61,8 @@ hl.on("hyprland.start", function ()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("/home/$USER/scripts/unblock.sh")
 	hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
+	hl.exec_cmd("hyprpaper")
+	hl.exec_cmd("rfkill unblock wifi")
 end)
 
 
@@ -135,11 +137,9 @@ hl.config({
             color        = 0xee1a1a1a,
         },
 
-        blur = {
-            enabled   = true,
-            size      = 3,
-            passes    = 1,
-            vibrancy  = 0.1696,
+		blur = {
+			enabled = true,
+			variant = acrylic,
         },
     },
 

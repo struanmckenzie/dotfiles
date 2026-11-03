@@ -1,8 +1,11 @@
+alsa-utils
 base
 base-devel
 blueman
 bluez
 bluez-utils
+btop
+btrfs-progs
 dunst
 efibootmgr
 firefox
@@ -21,12 +24,13 @@ linux-lts
 linux-lts-headers
 man-db
 man-pages
-mesa
+nano
 neovim
 network-manager-applet
 networkmanager
 noto-fonts
-
+numlockx
+nvidia-open-lts
 pipewire
 pipewire-pulse
 polkit-kde-agent
@@ -41,5 +45,6 @@ wireplumber
 wl-clipboard
 woff2-font-awesome
 wofi
+xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs

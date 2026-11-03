@@ -35,6 +35,7 @@ polkit-kde-agent
 sddm
 sudo
 thunar
+tree
 ttf-dejavu
 ttf-jetbrains-mono-nerd
 udiskie

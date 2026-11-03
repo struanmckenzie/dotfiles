@@ -7,6 +7,6 @@
 hl.env("XCURSOR_SIZE", "18")
 hl.env("HYPRCURSOR_SIZE", "18")
 
-hl.env("GTK_THEME", "Adwaita:dark")
+hl.env("GTK_THEME", "Adwaita-dark")
 hl.env("COLORSCHEME", "prefer-dark")
 

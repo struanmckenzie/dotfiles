@@ -6,6 +6,9 @@
 -- Create your files separately and then require them like this:
 -- require("myColors")
 
+require("autostart")
+require("environment_variables")
+require("permissions")
 
 ------------------
 ---- MONITORS ----
@@ -31,11 +34,6 @@ local menu = "wofi"
 local browser = "firefox"
 
 
-require("autostart")
-
-require("environment_variables")
-
-require("permissions")
 
 
 -----------------------
@@ -69,8 +67,8 @@ hl.config({
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
-        active_opacity   = 0.90,
-        inactive_opacity = 0.90,
+        active_opacity   = 1.00,
+        inactive_opacity = 1.00,
 
         shadow = {
             enabled      = true,
@@ -182,9 +180,9 @@ hl.config({
 
 
 require("layers")
-
-
 require("input")
+
+
 
 
 ---------------------
@@ -247,52 +245,4 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
-
---------------------------------
----- WINDOWS AND WORKSPACES ----
---------------------------------
-
--- See https://wiki.hypr.land/configuring/core/rules/
-
--- Example window rules that are useful
-
-local suppressMaximizeRule = hl.window_rule({
-    -- Ignore maximize requests from all apps. You'll probably like this.
-    name  = "suppress-maximize-events",
-    match = { class = ".*" },
-
-    suppress_event = "maximize",
-})
--- suppressMaximizeRule:set_enabled(false)
-
-hl.window_rule({
-    -- Fix some dragging issues with XWayland
-    name  = "fix-xwayland-drags",
-    match = {
-        class      = "^$",
-        title      = "^$",
-        xwayland   = true,
-        float      = true,
-        fullscreen = false,
-        pin        = false,
-    },
-
-    no_focus = true,
-})
-
--- Layer rules also return a handle.
--- local overlayLayerRule = hl.layer_rule({
---     name  = "no-anim-overlay",
---     match = { namespace = "^my-overlay$" },
---     no_anim = true,
--- })
--- overlayLayerRule:set_enabled(false)
-
--- Hyprland-run windowrule
-hl.window_rule({
-    name  = "move-hyprland-run",
-    match = { class = "hyprland-run" },
-
-    move  = "20 monitor_h-120",
-    float = true,
-})
+require("windows_workspaces")

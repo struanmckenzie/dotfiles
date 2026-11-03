@@ -20,6 +20,7 @@ hyprlock
 hyprpaper
 intel-ucode
 kitty
+libreoffice-fresh
 linux-firmware
 linux-lts
 linux-lts-headers
@@ -35,6 +36,7 @@ nvidia-open-lts
 pipewire
 pipewire-pulse
 polkit-kde-agent
+reflector
 sddm
 sudo
 thunar

@@ -7,4 +7,4 @@ pacman -Qqe > pkglist.txt
 git add .
 git commit -m "Updated system"
 
-git push origin main
+git push origin $HOSTNAME

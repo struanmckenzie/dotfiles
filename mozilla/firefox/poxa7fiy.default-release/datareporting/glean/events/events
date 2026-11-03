@@ -1,0 +1,1 @@
+{"timestamp":1370955,"category":"nimbus_events","name":"database_write","extra":{"glean_timestamp":"1793719584166","success":"true"},"session":{"session_id":"716c339b-b68f-45a4-9023-d87157ae0d13","session_seq":10,"event_seq":654,"session_sample_rate":1.0,"session_start_time":"2026-11-03T15:07:31.205Z"}}

@@ -52,3 +52,16 @@ hl.window_rule({
 	opacity = "0.8 0.8",
 })
 
+hl.window_rule({
+	match = { title = "btop-float" },
+	size = "800 600",
+	center = true,
+	float = true,
+})
+
+hl.window_rule({
+	match = { title = "alsam" },
+	size = "800 600",
+	center = true,
+	float = true,
+})

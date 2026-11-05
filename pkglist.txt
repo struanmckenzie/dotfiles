@@ -1,4 +1,5 @@
 alsa-utils
+ark
 base
 base-devel
 blueman
@@ -40,6 +41,7 @@ reflector
 sddm
 sudo
 thunar
+tree
 ttf-dejavu
 ttf-jetbrains-mono-nerd
 udiskie

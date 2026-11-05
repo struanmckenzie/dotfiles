@@ -11,7 +11,7 @@ hl.config({
 hl.layer_rule({
     name = "blur-waybar",
     match = { namespace = "^waybar$" },
-    blur = true,
+    blur = false,
 })
 
 hl.layer_rule({

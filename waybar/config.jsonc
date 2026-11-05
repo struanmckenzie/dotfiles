@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 32,
     "spacing": 5,
 
     "modules-left": [],
@@ -14,13 +14,11 @@
         "network",
         "cpu",
         "memory",
-        "pulseaudio",
-        "backlight",
-        "battery"
+        "pulseaudio"
     ],
 
     "clock": {
-        "format": " {:%H:%M}",
+        "format": "{:%H:%M}",
         "tooltip-format": "<big>{:%A %d %B %Y}</big>"
     },
 
@@ -29,13 +27,14 @@
         "format-ethernet": "󰈀 Ethernet",
         "format-disconnected": "󰖪 Offline",
         "format-alt": "󰩟 {ipaddr}",
-        "tooltip": false
+        "tooltip": false,
+		"on-click-right": "nm-connection-editor"
     },
 
     "cpu": {
         "format": " {usage}%",
         "tooltip": false,
-        "on-click": "kitty -e btop"
+        "on-click": "kitty --title btop-float -e btop"
     },
 
     "memory": {
@@ -45,6 +44,7 @@
     },
 
     "pulseaudio": {
+		"on-click": "kitty --title alsam -e alsamixer",
         "format": "{icon} {volume}%",
         "format-muted": "󰖁 Muted",
         "scroll-step": 2,
@@ -55,26 +55,5 @@
                 "󰕾"
             ]
         }
-    },
-
-    "backlight": {
-        "format": "󰃠 {percent}%",
-        "scroll-step": 5
-    },
-
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
-        "format-icons": [
-            "󰂎",
-            "󰁺",
-            "󰁼",
-            "󰁾",
-            "󰂂"
-        ]
     }
 }

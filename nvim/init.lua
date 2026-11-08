@@ -1,2 +1,8 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+require("treesitter")
+vim.cmd("syntax enable")
+vim.lsp.enable({
+    "clangd",
+    "lua_ls",
+    "pyright",
+    "jdtls",
+})

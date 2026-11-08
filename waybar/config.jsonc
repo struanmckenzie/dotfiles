@@ -1,21 +1,29 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 32,
+    "height": 0,
     "spacing": 5,
 
-    "modules-left": [],
+    "modules-left": [	
+        "cpu",
+        "memory",
+	"network",
+        "pulseaudio"
+    ],
 
     "modules-center": [
         "clock"
     ],
 
     "modules-right": [
-        "network",
-        "cpu",
-        "memory",
-        "pulseaudio"
+    	"custom/poweroff"
     ],
+	
+    "custom/poweroff": {
+	"format": "",
+	"tooltip": false,
+	"on-click": "kitty -e systemctl poweroff"
+    },
 
     "clock": {
         "format": "{:%H:%M}",
@@ -23,31 +31,32 @@
     },
 
     "network": {
-        "format-wifi": " {essid}",
-        "format-ethernet": "󰈀 Ethernet",
-        "format-disconnected": "󰖪 Offline",
-        "format-alt": "󰩟 {ipaddr}",
-        "tooltip": false,
-		"on-click-right": "nm-connection-editor"
+        "format-wifi": "{essid}",	
+        "format-ethernet": "Ethernet",
+        "format-disconnected": "Offline",
+	"tooltip": false,
+	"format-alt": "{ipaddr}",
+	"on-click-middle": "nm-connection-editor"
     },
 
     "cpu": {
-        "format": " {usage}%",
+        "format": "CPU {usage}%",
         "tooltip": false,
         "on-click": "kitty --title btop-float -e btop"
     },
 
     "memory": {
-        "format": "󰍛 {}%",
+        "format": "RAM {}%",
         "tooltip": false,
         "on-click": "kitty --title btop-float -e btop"
     },
 
     "pulseaudio": {
-		"on-click": "kitty --title alsam -e alsamixer",
+	"on-click": "kitty --title alsam -e alsamixer",
+        "on-click-middle": "amixer set Master toggle",
         "format": "{icon} {volume}%",
         "format-muted": "󰖁 Muted",
-        "scroll-step": 2,
+        "scroll-step": 5,
         "format-icons": {
             "default": [
                 "󰕿",

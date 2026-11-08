@@ -1,8 +1,7 @@
 * {
     border: none;
-    border-radius: 0;
     font-family: "JetBrainsMono Nerd Font", FontAwesome, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     min-height: 0;
 }
 
@@ -11,68 +10,60 @@ window#waybar {
 }
 
 /* Generic module styling */
-
+#custom-poweroff,
 #clock,
 #network,
 #cpu,
 #memory,
 #pulseaudio {
-    background: rgba(180, 140, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.8), 
+    2px 2px 3px rgba(255, 255, 255, 0.7) inset;
 
-    /* acrylic effect */
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: black;
 
-    color: #f5e9ff;
-
-    margin-top: 7px;
-    margin-right: 10px;
-    padding: 0 12px;
-
-    min-width: 50px;
-    min-height: 32px;
+    margin: 5px 10px 5px;
+    padding: 0 12px 0 12px;
 
     border-radius: 16px;
     
     transition: all 0.2s ease;
 }
 
+#custom-poweroff {
+	padding: 0 8px 0 4px;
+}
+
 #clock {
     min-width: 50px;
     font-weight: 700;
-
-    background: rgba(210, 150, 255, 0.17);
 }
 
 /* Hover effect */
-
-#clock:hover,
+#custom-poweroff:hover,
 #network:hover,
 #cpu:hover,
 #memory:hover,
 #pulseaudio:hover {
-    background: rgba(220, 160, 255, 0.18);
-    border-color: rgba(255,255,255,0.28);
+    border-color: rgba(255,255,255,0.5);
+    box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.8) inset;
+}
+
+#custom-poweroff:hover {
+    box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.8), 
+    2px 2px 3px rgba(255, 255, 255, 0.7) inset;
+    background: rgba(255, 30, 30, 0.5);
 }
 
 /* Network disconnected */
-
 #network.disconnected {
-    color: #ff8fa3;
+    background: rgba(255, 30, 30, 0.5);
 }
 
 /* Muted audio */
 
 #pulseaudio.muted {
-    color: #a8a8a8;
-}
-
-/* Keep widths visually consistent */
-
-#cpu,
-#memory,
-#pulseaudio,
-#network {
-    min-width: 40px;
+    background: rgba(255, 30, 30, 0.5);
 }
 
 

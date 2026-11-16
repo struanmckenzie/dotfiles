@@ -21,6 +21,8 @@ hypridle
 hyprland
 hyprlock
 hyprpaper
+hyprpolkitagent
+hyprsunset
 intel-ucode
 jdtls
 kitty
@@ -39,6 +41,7 @@ networkmanager
 noto-fonts
 nvidia-open-lts
 openbsd-netcat
+os-prober
 pavucontrol
 pipewire
 pipewire-alsa
@@ -55,7 +58,9 @@ tree
 tree-sitter-cli
 ttf-dejavu
 ttf-jetbrains-mono-nerd
+ttf-ubuntu-font-family
 udiskie
+usbutils
 waybar
 wireplumber
 wl-clipboard

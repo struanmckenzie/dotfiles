@@ -17,6 +17,11 @@ hl.layer_rule({
 hl.layer_rule({
     name = "blur-wofi",
     match = { namespace = "^wofi$" },
-    blur = true,
+    blur = false,
 })
 
+hl.layer_rule({
+    name = "blur-menu",
+    match = { namespace = "^menu$" },
+    blur = true,
+})

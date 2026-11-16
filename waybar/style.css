@@ -1,37 +1,40 @@
-* {
-    border: none;
-    font-family: "JetBrainsMono Nerd Font", FontAwesome, sans-serif;
-    font-size: 14px;
-    min-height: 0;
+/* remove all styles from the workspaces button
+ * in order to remove the silly default text movement
+ */
+window#waybar,
+#workspaces button,
+menu {
+	all: unset;
 }
 
-window#waybar {
-    background: none;
+* {
+    border: none;
+    font-family: "Ubuntu", "JetBrainsMono Nerd Font", FontAwesome, sans-serif;
+    font-size: 15px;
 }
 
 /* Generic module styling */
-#custom-poweroff,
+menu,
+menuitem,
+#workspaces button,
+#custom-power,
 #clock,
 #network,
 #cpu,
 #memory,
 #pulseaudio {
-    border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.8), 
-    2px 2px 3px rgba(255, 255, 255, 0.7) inset;
-
+    1px 2px 3px rgba(255, 255, 255, 0.6) inset;
     color: black;
-
-    margin: 5px 10px 5px;
+    margin: 6px 6px 5px;
     padding: 0 12px 0 12px;
-
+	background: rgba(255,255,255, 0.1);
     border-radius: 16px;
-    
     transition: all 0.2s ease;
 }
 
-#custom-poweroff {
-	padding: 0 8px 0 4px;
+#custom-power {
+	padding: 0 8px 0 5px;
 }
 
 #clock {
@@ -39,8 +42,11 @@ window#waybar {
     font-weight: 700;
 }
 
-/* Hover effect */
-#custom-poweroff:hover,
+/* Generic Hover effect */
+menu:hover,
+menuitem:hover,
+#custom-power:hover, /* doesnt work */
+#workspaces button:hover,
 #network:hover,
 #cpu:hover,
 #memory:hover,
@@ -49,19 +55,24 @@ window#waybar {
     box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.8) inset;
 }
 
-#custom-poweroff:hover {
+#workspaces button.active:hover {
     box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.8), 
     2px 2px 3px rgba(255, 255, 255, 0.7) inset;
+}
+
+/* doesnt work
+#custom-power:hover {
+	background: transparent;
     background: rgba(255, 30, 30, 0.5);
 }
+*/
 
 /* Network disconnected */
 #network.disconnected {
-    background: rgba(255, 30, 30, 0.5);
+    background: rgba(255, 30, 30, 1);
 }
 
 /* Muted audio */
-
 #pulseaudio.muted {
     background: rgba(255, 30, 30, 0.5);
 }

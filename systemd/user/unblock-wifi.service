@@ -1,0 +1,10 @@
+[Unit]
+Description=Unblock Wi-Fi with rfkill
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/rfkill unblock wifi
+
+[Install]
+WantedBy=default.target

@@ -1,26 +1,34 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 40,
+    "height": 0,
     "spacing": 8,
 
-    "modules-left": [],
+    "modules-left": [
+        "cpu",
+        "memory",
+        "network"
+    ],
 
     "modules-center": [
         "clock"
     ],
 
     "modules-right": [
-        "network",
-        "cpu",
-        "memory",
         "pulseaudio",
         "backlight",
-        "battery"
+        "battery",
+        "custom/poweroff"
     ],
 
+    "custom/poweroff": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "systemctl poweroff"
+    },
+
     "clock": {
-        "format": " {:%H:%M}",
+        "format": "{:%H:%M}",
         "tooltip-format": "<big>{:%A %d %B %Y}</big>"
     },
 
@@ -28,18 +36,18 @@
         "format-wifi": " {essid}",
         "format-ethernet": "󰈀 Ethernet",
         "format-disconnected": "󰖪 Offline",
-        "format-alt": "󰩟 {ipaddr}",
+        "format-alt": "{ipaddr}",
         "tooltip": false
     },
 
     "cpu": {
-        "format": " {usage}%",
+        "format": "CPU {usage}%",
         "tooltip": false,
         "on-click": "kitty -e btop"
     },
 
     "memory": {
-        "format": "󰍛 {}%",
+        "format": "RAM {}%",
         "tooltip": false,
         "on-click": "kitty --title btop-float -e btop"
     },
